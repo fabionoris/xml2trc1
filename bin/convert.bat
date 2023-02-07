@@ -36,7 +36,7 @@ if exist %SCRIPTPATH%\res\header.dat (
 )
 
 if not exist %SCRIPTPATH%%USERLEVEL%%XMLLOCATION%*.xml (
-	echo Attenzione: nessun file xml trovato!
+    echo Attenzione: nessun file xml trovato!
     echo Inserisci tutti i file XML che vuoi convertire nella cartella %XMLLOCATION%.
     echo Si noti che i filename devono tutti essere nel formato "nomefile.xml"
     echo.
@@ -45,7 +45,7 @@ if not exist %SCRIPTPATH%%USERLEVEL%%XMLLOCATION%*.xml (
 )
 
 if exist %SCRIPTPATH%%USERLEVEL%%RESULT%* (
-	echo Attenzione: %RESULT% risulta presente nella cartella!
+    echo Attenzione: %RESULT% risulta presente nella cartella!
     echo Premi un tasto per aggiungere le conversioni allo stesso file,
     echo altrimenti chiudi la finestra per terminare il programma.
     echo.
@@ -54,9 +54,9 @@ if exist %SCRIPTPATH%%USERLEVEL%%RESULT%* (
 )
 
 for %%f in (%SCRIPTPATH%%USERLEVEL%%XMLLOCATION%*.xml) do (
-	echo Converto %%~nf
-	%SCRIPTPATH%\lib\xmllint.exe --xpath "concat(%FORMATLINE%)" "%SCRIPTPATH%\..\xml\%%~nf.xml" >> %SCRIPTPATH%%USERLEVEL%%RESULT%
-	echo. >> %SCRIPTPATH%%USERLEVEL%%RESULT%
+    echo Converto %%~nf
+    %SCRIPTPATH%\lib\xmllint.exe --xpath "concat(%FORMATLINE%)" "%SCRIPTPATH%\..\xml\%%~nf.xml" >> %SCRIPTPATH%%USERLEVEL%%RESULT%
+    echo. >> %SCRIPTPATH%%USERLEVEL%%RESULT%
 )
 
 echo.
