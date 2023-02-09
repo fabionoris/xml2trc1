@@ -1,7 +1,7 @@
 XML to Tipo Record C1 Converter
 ===============================
 
-`xml2trc1` is a window tool to convert XML files into Tipo Record C1, a format used in Italian accounting.
+`xml2trc1` is a Windows tool to convert XML files into Tipo Record C1, a format used in Italian accounting.
 
 Usage
 -----
